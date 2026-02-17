@@ -120,7 +120,7 @@ const messages = [
   "You make my waiting worth it❤️",
   "Sometimes, I just sit and smile remembering how we started❤️",
   "I want to walk our journey of life with you soon❤️",
-  "Even in another life, I'll find you❤️",
+  "Even in another life, I'll find you❤️"
 
 
 ];
