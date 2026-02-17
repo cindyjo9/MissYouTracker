@@ -37,6 +37,18 @@
       color: #444;
       min-height: 30px;
     }
+
+    #image {
+      margin-top: 20px;
+      max-width: 400px;
+      max-height: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #messageContainer {
+      margin-top: 20px;
+    }
   </style>
 </head>
 
@@ -46,38 +58,96 @@
 
 <button onclick="missYou()">I Miss You</button>
 
-<div id="message"></div>
+<div id="messageContainer">
+  <div id="message"></div>
+  <img id="image" src="" alt="Missing you" style="display: none;">
+</div>
 
 <script>
 const messages = [
-  "I'm always thinking about you kannalu💭",
-  "I don't know if I love you more than you love me, but I truly miss you more than you miss me bujjuuluu❤️",
-  "Every second feels like an hour without you kanna⌛",
-  "I love you forever and ever♾️",
-  "You’re my safest place naana 💙",
-  "You have replaced all my memories🤗",
-  "Will you be my valentine❤️",
-  "Come closer, Virtual hugs🫂",
-  "Virtual kisses😘😘",
-  "1 year later, we will be married by then💍",
-  "I love you soooo much bujjuu😍",
-  "Remember the day we had sex in our car?😻",
-  "You are my forever partner in love, partner in crime😜",
-  "Our first steal- dark chocolate in bangalore😜",
-  "Our first kiss on August 20😘",
-  "My first rose on August 20 at Bertana Agrahara🌹"
+  {
+    text: "I'm always thinking about you kannalu💭",
+    image: "https://via.placeholder.com/400x300?text=Thinking+Of+You"
+  },
+  {
+    text: "I don't know if I love you more than you love me, but I truly miss you more than you miss me bujjuuluu❤️",
+    image: "https://via.placeholder.com/400x300?text=I+Miss+You"
+  },
+  {
+    text: "Every second feels like an hour without you kanna⌛",
+    image: "https://via.placeholder.com/400x300?text=Time+Apart"
+  },
+  {
+    text: "I love you forever and ever♾️",
+    image: "https://via.placeholder.com/400x300?text=Forever"
+  },
+  {
+    text: "You're my safest place naana 💙",
+    image: "https://via.placeholder.com/400x300?text=Safe+Place"
+  },
+  {
+    text: "You have replaced all my memories🤗",
+    image: "https://via.placeholder.com/400x300?text=Memories"
+  },
+  {
+    text: "Will you be my valentine❤️",
+    image: "https://via.placeholder.com/400x300?text=Valentine"
+  },
+  {
+    text: "Come closer, Virtual hugs🫂",
+    image: "https://via.placeholder.com/400x300?text=Virtual+Hugs"
+  },
+  {
+    text: "Virtual kisses😘😘",
+    image: "https://via.placeholder.com/400x300?text=Kisses"
+  },
+  {
+    text: "1 year later, we will be married by then💍",
+    image: "https://via.placeholder.com/400x300?text=Married"
+  },
+  {
+    text: "I love you soooo much bujjuu😍",
+    image: "https://via.placeholder.com/400x300?text=Love+You"
+  },
+  {
+    text: "Remember the day we had sex in our car?😻",
+    image: "https://via.placeholder.com/400x300?text=Memories"
+  },
+  {
+    text: "You are my forever partner in love, partner in crime😜",
+    image: "https://via.placeholder.com/400x300?text=Partners"
+  },
+  {
+    text: "Our first steal- dark chocolate in bangalore😜",
+    image: "https://via.placeholder.com/400x300?text=Dark+Chocolate"
+  },
+  {
+    text: "Our first kiss on August 20😘",
+    image: "https://via.placeholder.com/400x300?text=First+Kiss"
+  },
+  {
+    text: "My first rose on August 20 at Bertana Agrahara🌹",
+    image: "https://via.placeholder.com/400x300?text=First+Rose"
+  }
 ];
 
 function missYou() {
   const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-  document.getElementById("message").innerText = randomMessage;
+  
+  // Display message
+  document.getElementById("message").innerText = randomMessage.text;
+  
+  // Display image
+  const imageElement = document.getElementById("image");
+  imageElement.src = randomMessage.image;
+  imageElement.style.display = "block";
 
   fetch("https://cindyjo9.github.io/cinvin/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({ message: randomMessage })
+    body: JSON.stringify({ message: randomMessage.text })
   })
   .then(response => {
     if (!response.ok) {
