@@ -1,4 +1,3 @@
-<html>
 <head>
   <title>Miss You 💙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,6 +35,16 @@
       font-size: 22px;
       color: #444;
       min-height: 30px;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -50,11 +59,11 @@
 
 <script>
 const messages = [
-"I'm always thinking about you kannalu💭",
+  "I'm always thinking about you kannalu💭",
   "I don't know if I love you more than you love me, but I truly miss you more than you miss me bujjuuluu❤️",
   "Every second feels like an hour without you kanna⌛",
   "I love you forever and ever♾️",
-  "You’re my safest place naana 💙",
+  "You're my safest place naana 💙",
   "You have replaced all my memories🤗",
   "Will you be my valentine❤️",
   "Come closer, Virtual hugs🫂",
@@ -83,7 +92,7 @@ const messages = [
   "You're really my weakness ra😕",
   "This is just a small phase of long distance kanna... we will soon be together forever❤️",
   "One day, we will laugh about this distance",
-  "I'm closer to you than anyone could be, right in your heart❤️",
+  "I'm closer to you than anyone could be.. right in your heart❤️",
   "August 19 is the best day of my life.. when I realized that I love you naana❤️",
   "I want FOREVER with you❤️",
   "I feel very lucky that you chose me❤️",
@@ -92,9 +101,9 @@ const messages = [
   "My heart recognized you long before my mind did❤️",
   "If distance is a test, then we are the answer❤️",
   "Even silence feels beautiful when its with you kanna❤️",
-  "One day, I will no longer have to say- I miss you",
+  "One day, I will no longer have to say 'I miss you'",
   "One day, I will soon wake up everyday beside you kanna❤️",
-  "I believe God wrote us into each other’s lives",
+  "I believe God wrote us into each other's lives",
   "I asked for peace, God sent me you",
   "The coorg trip was not just a coincidence, it was nature uniting us together❤️",
   "If I had to choose again, I'd still choose you naana❤️",
@@ -126,26 +135,7 @@ const messages = [
 function missYou() {
   const randomMessage = messages[Math.floor(Math.random() * messages.length)];
   document.getElementById("message").innerText = randomMessage;
-
-  fetch("https://cindyjo9.github.io/cinvin/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ message: randomMessage })
-  })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log('Notification sent successfully:', data);
-  })
-  .catch(error => {
-    console.error('Error sending notification:', error);
-  });
+  console.log("Message displayed:", randomMessage);
 }
 </script>
 
