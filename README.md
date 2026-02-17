@@ -55,16 +55,16 @@ const messages = [
   "Every second feels like an hour without you kanna⌛",
   "I love you forever and ever♾️",
   "You’re my safest place naana 💙",
-  "You have replaced all my memories🤗"
-  "Will you be my valentine❤️"
-  "Come closer, Virtual hugs🫂"
-  "Virtual kisses😘😘"
-  "1 year later, we will be married by then💍"
-  "I love you soooo much bujjuu😍"
-  "Remember the day we had sex in our car?😻"
-  "You are my forever partner in love, partner in crime😜"
-  "Our first steal- dark chocolate in bangalore😜"
-  "Our first kiss on August 20😘"
+  "You have replaced all my memories🤗",
+  "Will you be my valentine❤️",
+  "Come closer, Virtual hugs🫂",
+  "Virtual kisses😘😘",
+  "1 year later, we will be married by then💍",
+  "I love you soooo much bujjuu😍",
+  "Remember the day we had sex in our car?😻",
+  "You are my forever partner in love, partner in crime😜",
+  "Our first steal- dark chocolate in bangalore😜",
+  "Our first kiss on August 20😘",
   "My first rose on August 20 at Bertana Agrahara🌹"
 ];
 
