@@ -92,7 +92,7 @@ const messages = [
   "My heart recognized you long before my mind did❤️",
   "If distance is a test, then we are the answer❤️",
   "Even silence feels beautiful when its with you kanna❤️",
-  "One day, I will no longer have to say 'I miss you'",
+  "One day, I will no longer have to say- I miss you",
   "One day, I will soon wake up everyday beside you kanna❤️",
   "I believe God wrote us into each other’s lives",
   "I asked for peace, God sent me you",
